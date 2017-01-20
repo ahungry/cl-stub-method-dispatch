@@ -59,7 +59,7 @@
 
           (it "Should increment the X value of this class only..."
               (progn
-                (let ((stubby (make-instance 'cl-stub-method-dispatch.lib.stub:Stubby :x 0)))
+                (let ((stubby (make-instance 'cl-stub-method-dispatch.lib.stub:Stubby :y 0)))
                   (and
                    (eq 1 (cl-stub-method-dispatch.lib.stub:Incx stubby 1))
                    (eq 3 (cl-stub-method-dispatch.lib.stub:Incx stubby 2))

@@ -31,15 +31,15 @@
   input)
 
 (defclass Stubby ()
-  ((X
-    :accessor X
-    :initarg :x
+  ((Y
+    :accessor Y
+    :initarg :y
     :initform 0)))
 
 (defgeneric Incx (object n)
   (:documentation "Increment X by N."))
 
 (defmethod Incx ((stubby Stubby) n)
-  (incf (X stubby) n))
+  (incf (Y stubby) n))
 
 ;;; "cl-stub-method-dispatch.lib.stub" goes here. Hacks and glory await!
