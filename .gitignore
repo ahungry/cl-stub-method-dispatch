@@ -1,0 +1,13 @@
+#.*#
+*.swp
+*.fasl
+/autom4te.cache/
+/autoscan.log
+/config.log
+/config.status
+/configure
+/Makefile
+/bin/cl-stub-method-dispatch
+/bin/cl-stub-method-dispatch-test
+/bin/cl-stub-method-dispatch.core
+/coverage/
