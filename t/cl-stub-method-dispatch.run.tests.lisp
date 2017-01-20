@@ -53,6 +53,18 @@
           (it "Should echo the input"
               (eq 3 (cl-stub-method-dispatch.lib.stub:echo 3)))
           )
+
+         (desc
+          "cl-stub-method-dispatch.lib.stub:Stubby"
+
+          (it "Should increment the X value of this class only..."
+              (progn
+                (let ((stubby (make-instance 'cl-stub-method-dispatch.lib.stub:Stubby :x 0)))
+                  (and
+                   (eq 1 (cl-stub-method-dispatch.lib.stub:Incx stubby 1))
+                   (eq 3 (cl-stub-method-dispatch.lib.stub:Incx stubby 2))
+                   )))))
+
          ) ;; end suite
         (setf sb-ext:*exit-hooks* (list (lambda () (sb-ext:exit :code 0))))
         (setf sb-ext:*exit-hooks* (list (lambda () (sb-ext:exit :code 1)))))

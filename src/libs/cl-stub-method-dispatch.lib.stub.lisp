@@ -21,11 +21,25 @@
 (defpackage cl-stub-method-dispatch.lib.stub
   (:use :cl)
   (:export
+   :Stubby
+   :Incx
    :echo))
 
 (in-package #:cl-stub-method-dispatch.lib.stub)
 
 (defun echo (input)
   input)
+
+(defclass Stubby ()
+  ((X
+    :accessor X
+    :initarg :x
+    :initform 0)))
+
+(defgeneric Incx (object n)
+  (:documentation "Increment X by N."))
+
+(defmethod Incx ((stubby Stubby) n)
+  (incf (X stubby) n))
 
 ;;; "cl-stub-method-dispatch.lib.stub" goes here. Hacks and glory await!
